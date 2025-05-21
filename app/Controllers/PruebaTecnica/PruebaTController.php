@@ -45,6 +45,7 @@ class PruebaTController extends BaseController
             'tipo_doc'         => $this->request->getPost('tipo_documento'),
             'numero_doc'       => $this->request->getPost('numero_doc'),
             'telefono_usuario' => $this->request->getPost('telefono_usuario'),
+            'valor_ingresos' => $this->request->getPost('valor_ingresos'),
             'fecha_nacimiento' => $this->request->getPost('fecha_nacimiento'),
             'estado_usuario'   => 1
         ];
@@ -105,6 +106,7 @@ class PruebaTController extends BaseController
             'tipo_doc'         => $this->request->getPost('tipo_documento'),
             'numero_doc'       => $this->request->getPost('numero_doc'),
             'telefono_usuario' => $this->request->getPost('telefono_usuario'),
+            'valor_ingresos' => $this->request->getPost('valor_ingresos'),
             'fecha_nacimiento' => $this->request->getPost('fecha_nacimiento'),
         ];
 

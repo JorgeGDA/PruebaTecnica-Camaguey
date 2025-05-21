@@ -41,6 +41,13 @@ function cargar_usuarios() {
       { data: "correo_usuario" },
       { data: "telefono_usuario" },
       {
+        data: null,
+        render: function (data, type, row) {
+          return "$ " + row.valor_ingresos.toLocaleString("es-ES");
+        },
+      },
+
+      {
         data: "estado_usuario",
         render: function (data) {
           return data == 1
@@ -154,6 +161,7 @@ $(function () {
         $("#numero_doc").val(data.numero_doc);
         $("#tipo_documento").val(data.tipo_doc);
         $("#fecha_nacimiento").val(data.fecha_nacimiento);
+        $("#valor_ingresos").val(data.valor_ingresos);
         // Mostrar la foto del usuario
         if (data.img_usuario) {
           $("#previewFoto").attr(
@@ -210,7 +218,7 @@ function añadir_usuario() {
 }
 function volver() {
   $("#FormularioUser").slideUp(500, function () {
-    limpiar_campos()
+    limpiar_campos();
     $("#div_tablausuarios").slideDown(500);
   });
 }
@@ -221,109 +229,139 @@ function editar_usuario() {
   });
 }
 function validar_campos() {
-    let esValido = true;
+  let esValido = true;
 
-    let soloLetras = /^[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+$/;
-    let soloNumeros = /^[0-9]+$/;
-    let correoValido = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
+  let soloLetras = /^[A-Za-zÁÉÍÓÚÑáéíóúñ\s]+$/;
+  let soloNumeros = /^[0-9]+$/;
+  let correoValido = /^[^@]+@[^@]+\.[a-zA-Z]{2,}$/;
 
-    // Validar primer nombre
-    if ($("#primer_nombre").val().trim() === "" || !soloLetras.test($("#primer_nombre").val())) {
-        $("#primer_nombre").addClass("is-invalid").removeClass("is-valid");
-        esValido = false;
-    } else {
-        $("#primer_nombre").addClass("is-valid").removeClass("is-invalid");
-    }
+  // Validar primer nombre
+  if (
+    $("#primer_nombre").val().trim() === "" ||
+    !soloLetras.test($("#primer_nombre").val())
+  ) {
+    $("#primer_nombre").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#primer_nombre").addClass("is-valid").removeClass("is-invalid");
+  }
 
-    // Segundo nombre
-    if ($("#segundo_nombre").val().trim() === "" || !soloLetras.test($("#segundo_nombre").val())) {
-        $("#segundo_nombre").addClass("is-invalid").removeClass("is-valid");
-        esValido = false;
-    } else {
-        $("#segundo_nombre").addClass("is-valid").removeClass("is-invalid");
-    }
+  // Segundo nombre
+  if (
+    $("#segundo_nombre").val().trim() === "" ||
+    !soloLetras.test($("#segundo_nombre").val())
+  ) {
+    $("#segundo_nombre").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#segundo_nombre").addClass("is-valid").removeClass("is-invalid");
+  }
 
-    // Primer apellido
-    if ($("#primer_apellido").val().trim() === "" || !soloLetras.test($("#primer_apellido").val())) {
-        $("#primer_apellido").addClass("is-invalid").removeClass("is-valid");
-        esValido = false;
-    } else {
-        $("#primer_apellido").addClass("is-valid").removeClass("is-invalid");
-    }
+  // Primer apellido
+  if (
+    $("#primer_apellido").val().trim() === "" ||
+    !soloLetras.test($("#primer_apellido").val())
+  ) {
+    $("#primer_apellido").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#primer_apellido").addClass("is-valid").removeClass("is-invalid");
+  }
 
-    // Segundo apellido
-    if ($("#segundo_apellido").val().trim() === "" || !soloLetras.test($("#segundo_apellido").val())) {
-        $("#segundo_apellido").addClass("is-invalid").removeClass("is-valid");
-        esValido = false;
-    } else {
-        $("#segundo_apellido").addClass("is-valid").removeClass("is-invalid");
-    }
+  // Segundo apellido
+  if (
+    $("#segundo_apellido").val().trim() === "" ||
+    !soloLetras.test($("#segundo_apellido").val())
+  ) {
+    $("#segundo_apellido").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#segundo_apellido").addClass("is-valid").removeClass("is-invalid");
+  }
 
-    // Correo
-    if (!correoValido.test($("#correo_usuario").val().trim())) {
-        $("#correo_usuario").addClass("is-invalid").removeClass("is-valid");
-        esValido = false;
-    } else {
-        $("#correo_usuario").addClass("is-valid").removeClass("is-invalid");
-    }
+  // Correo
+  if (!correoValido.test($("#correo_usuario").val().trim())) {
+    $("#correo_usuario").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#correo_usuario").addClass("is-valid").removeClass("is-invalid");
+  }
 
-    // Teléfono
-    if ($("#telefono_usuario").val().trim() === "" || !soloNumeros.test($("#telefono_usuario").val())) {
-        $("#telefono_usuario").addClass("is-invalid").removeClass("is-valid");
-        esValido = false;
-    } else {
-        $("#telefono_usuario").addClass("is-valid").removeClass("is-invalid");
-    }
+  // Teléfono
+  if (
+    $("#telefono_usuario").val().trim() === "" ||
+    !soloNumeros.test($("#telefono_usuario").val())
+  ) {
+    $("#telefono_usuario").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#telefono_usuario").addClass("is-valid").removeClass("is-invalid");
+  }
+  // Valor Ingresos
+  if (
+    $("#valor_ingresos").val().trim() === "" ||
+    !soloNumeros.test($("#valor_ingresos").val())
+  ) {
+    $("#valor_ingresos").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#valor_ingresos").addClass("is-valid").removeClass("is-invalid");
+  }
 
-    // Fecha de nacimiento
-    if ($("#fecha_nacimiento").val().trim() === "") {
-        $("#fecha_nacimiento").addClass("is-invalid").removeClass("is-valid");
-        esValido = false;
-    } else {
-        $("#fecha_nacimiento").addClass("is-valid").removeClass("is-invalid");
-    }
+  // Fecha de nacimiento
+  if ($("#fecha_nacimiento").val().trim() === "") {
+    $("#fecha_nacimiento").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#fecha_nacimiento").addClass("is-valid").removeClass("is-invalid");
+  }
 
-    // Tipo de documento
-    if ($("#tipo_documento").val() === "" || $("#tipo_documento").val() === null) {
-        $("#tipo_documento").addClass("is-invalid").removeClass("is-valid");
-        esValido = false;
-    } else {
-        $("#tipo_documento").addClass("is-valid").removeClass("is-invalid");
-    }
+  // Tipo de documento
+  if (
+    $("#tipo_documento").val() === "" ||
+    $("#tipo_documento").val() === null
+  ) {
+    $("#tipo_documento").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#tipo_documento").addClass("is-valid").removeClass("is-invalid");
+  }
 
-    // Número de documento
-    if ($("#numero_doc").val().trim() === "" || !soloNumeros.test($("#numero_doc").val())) {
-        $("#numero_doc").addClass("is-invalid").removeClass("is-valid");
-        esValido = false;
-    } else {
-        $("#numero_doc").addClass("is-valid").removeClass("is-invalid");
-    }
+  // Número de documento
+  if (
+    $("#numero_doc").val().trim() === "" ||
+    !soloNumeros.test($("#numero_doc").val())
+  ) {
+    $("#numero_doc").addClass("is-invalid").removeClass("is-valid");
+    esValido = false;
+  } else {
+    $("#numero_doc").addClass("is-valid").removeClass("is-invalid");
+  }
 
-    return esValido;
+  return esValido;
 }
 
 function limpiar_campos() {
-    // Limpiar inputs de texto y quitar clases de validación
-    $("#primer_nombre, #segundo_nombre, #primer_apellido, #segundo_apellido, #correo_usuario, #numero_doc, #telefono_usuario, #fecha_nacimiento")
-        .val("")
-        .removeClass("is-valid is-invalid");
+  // Limpiar inputs de texto y quitar clases de validación
+  $(
+    "#primer_nombre, #segundo_nombre, #primer_apellido, #segundo_apellido, #correo_usuario, #numero_doc, #telefono_usuario, #fecha_nacimiento"
+  )
+    .val("")
+    .removeClass("is-valid is-invalid");
 
-    // Limpiar select
-    $("#tipo_documento")
-        .val("")
-        .removeClass("is-valid is-invalid");
+  // Limpiar select
+  $("#tipo_documento").val("").removeClass("is-valid is-invalid");
 
-    // Limpiar campo oculto de ID si existe
-    $("#iduser").val("").removeClass("is-valid is-invalid");
+  // Limpiar campo oculto de ID si existe
+  $("#iduser").val("").removeClass("is-valid is-invalid");
 
-    // Limpiar foto y volver a la imagen por defecto
-    $("#foto_usuario").val(""); // Limpiar el input file
-    $("#previewFoto").attr("src", "assets/img/foto_user.jpg"); // Volver a imagen por defecto
+  // Limpiar foto y volver a la imagen por defecto
+  $("#foto_usuario").val(""); // Limpiar el input file
+  $("#previewFoto").attr("src", "assets/img/foto_user.jpg"); // Volver a imagen por defecto
 
   $("#guardar_usuario2").show();
   $("#actualizar_usuario2").hide();
 }
-
 
 function guardar_usuario() {
   console.log("Función detectada correctamente");
@@ -339,6 +377,7 @@ function guardar_usuario() {
   formData.append("tipo_documento", $("#tipo_documento option:selected").val());
   formData.append("numero_doc", parseInt($("#numero_doc").val()));
   formData.append("telefono_usuario", parseInt($("#telefono_usuario").val()));
+  formData.append("valor_ingresos", parseInt($("#valor_ingresos").val()));
   formData.append("fecha_nacimiento", $("#fecha_nacimiento").val());
 
   const fotousuario = $("#foto_usuario")[0].files[0];
@@ -346,9 +385,13 @@ function guardar_usuario() {
   if (fotousuario) formData.append("foto_usuario", fotousuario);
 
   if (!validar_campos()) {
-  swal("Campos incompletos o inválidos", "Por favor revisa los datos", "warning");
-  return;
-}
+    swal(
+      "Campos incompletos o inválidos",
+      "Por favor revisa los datos",
+      "warning"
+    );
+    return;
+  }
 
   swal({
     title: "Cargando...",
@@ -416,6 +459,7 @@ function actualizar_usuario() {
   formData.append("numero_doc", parseInt($("#numero_doc").val()));
   formData.append("telefono_usuario", parseInt($("#telefono_usuario").val()));
   formData.append("fecha_nacimiento", $("#fecha_nacimiento").val());
+  formData.append("valor_ingresos", parseInt($("#valor_ingresos").val()));
 
   // Foto (opcional)
   const fotousuario = $("#foto_usuario")[0].files[0];
@@ -424,10 +468,13 @@ function actualizar_usuario() {
   }
 
   if (!validar_campos()) {
-  swal("Campos incompletos o inválidos", "Por favor revisa los datos", "warning");
-  return;
-}
-
+    swal(
+      "Campos incompletos o inválidos",
+      "Por favor revisa los datos",
+      "warning"
+    );
+    return;
+  }
 
   // Mostrar loading
   swal({

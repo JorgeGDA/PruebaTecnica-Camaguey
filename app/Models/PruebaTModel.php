@@ -15,6 +15,7 @@ class PruebaTModel extends Model
         'primer_apellido',
         'segundo_apellido',
         'telefono_usuario',
+        'valor_ingresos',
         'tipo_doc',
         'numero_doc',
         'img_usuario',

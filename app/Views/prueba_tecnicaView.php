@@ -46,8 +46,8 @@
             </a>
 
             <div class="nav-logo align-self-center">
-                <a class="navbar-brand" href="index.html">
-                    <img alt="logo" src="assets/img/90x90.jpg">
+                <a class="navbar-brand">
+                    <img alt="logo" src="assets/img/perfil.png">
                     <span class="navbar-brand-name">Prueba Tecnica</span>
                 </a>
             </div>
@@ -59,10 +59,9 @@
                         aria-haspopup="true" aria-expanded="false">
                         <div class="media">
                             <div class="media-body align-self-center">
-                                <h4 style="color: white; font-weight:600">Jorge Gomez</h4>
-                                <p>Desarrollador Software</p>
+                                <h4 style="color: white; font-weight:600">Jorge H. Gomez</h4>
+                                <b><p>Desarrollador FullStack</p></b>
                             </div>
-                            <img src="assets/img/90x90.jpg" class="img-fluid" alt="admin-profile">
                         </div>
                     </a>
                 </li>
@@ -114,6 +113,7 @@
                                             <th>Apellidos</th>
                                             <th>Correo</th>
                                             <th>Telefono</th>
+                                            <th>Valor Ingresos</th>
                                             <th class="text-center">Estado</th>
                                             <th class="text-center dt-no-sorting">Acciones</th>
                                         </tr>
@@ -230,6 +230,10 @@
                                                     <div class="form-group col-md-4">
                                                         <label>Teléfono</label>
                                                         <input type="number" class="form-control" id="telefono_usuario">
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label>Valor ingresos</label>
+                                                        <input type="number" class="form-control" id="valor_ingresos">
                                                     </div>
                                                 </div>
                                                 <br><br>

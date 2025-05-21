@@ -1,0 +1,287 @@
+ERROR - 2025-05-19 18:50:55 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 3306? in C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 78)
+#1 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php(78): pg_connect('host=localhost ...')
+#2 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "c".*\nFR...', Array, false)
+#5 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Models\PruebaTModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Controllers\PruebaTecnica\PruebaTController.php(15): App\Models\PruebaTModel->get_usuarios()
+#7 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->get_usuarios()
+#8 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+#9 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\PruebaTecnica-Camaguey\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-19 18:50:55 --> CodeIgniter\HTTP\Exceptions\HTTPException: 0 is not a valid HTTP return status code
+[Method: GET, Route: PruebaTecnica/get_usuarios]
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 82.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(82): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidStatusCode(0)
+ 2 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(18): CodeIgniter\HTTP\Response->setStatusCode(0, 'Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 3306?')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->get_usuarios()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-19 18:54:56 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 3306? in C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 78)
+#1 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php(78): pg_connect('host=localhost ...')
+#2 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "c".*\nFR...', Array, false)
+#5 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Models\PruebaTModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Controllers\PruebaTecnica\PruebaTController.php(15): App\Models\PruebaTModel->get_usuarios()
+#7 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->get_usuarios()
+#8 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+#9 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\PruebaTecnica-Camaguey\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-19 18:54:56 --> CodeIgniter\HTTP\Exceptions\HTTPException: 0 is not a valid HTTP return status code
+[Method: GET, Route: PruebaTecnica/get_usuarios]
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 82.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(82): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidStatusCode(0)
+ 2 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(18): CodeIgniter\HTTP\Response->setStatusCode(0, 'Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 3306?')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->get_usuarios()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-19 18:56:00 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 3306? in C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 78)
+#1 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php(78): pg_connect('host=localhost ...')
+#2 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "c".*\nFR...', Array, false)
+#5 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Models\PruebaTModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Controllers\PruebaTecnica\PruebaTController.php(15): App\Models\PruebaTModel->get_usuarios()
+#7 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->get_usuarios()
+#8 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+#9 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\PruebaTecnica-Camaguey\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+CRITICAL - 2025-05-19 18:56:00 --> CodeIgniter\HTTP\Exceptions\HTTPException: 0 is not a valid HTTP return status code
+[Method: GET, Route: PruebaTecnica/get_usuarios]
+in SYSTEMPATH\HTTP\ResponseTrait.php on line 82.
+ 1 SYSTEMPATH\HTTP\ResponseTrait.php(82): CodeIgniter\HTTP\Exceptions\HTTPException::forInvalidStatusCode(0)
+ 2 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(18): CodeIgniter\HTTP\Response->setStatusCode(0, 'Unable to connect to the database.
+Main connection [Postgre]: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 3306?')
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->get_usuarios()
+ 4 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+ 5 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-19 18:58:51 --> Error connecting to the database: ErrorException: pg_connect(): Unable to connect to PostgreSQL server: could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (::1) and accepting
+	TCP/IP connections on port 3306?
+could not connect to server: Connection refused (0x0000274D/10061)
+	Is the server running on host &quot;localhost&quot; (127.0.0.1) and accepting
+	TCP/IP connections on port 3306? in C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php:78
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_connect(): U...', 'C:\\xampp\\htdocs...', 78)
+#1 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php(78): pg_connect('host=localhost ...')
+#2 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect(false)
+#3 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "c".*\nFR...', Array, false)
+#5 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Models\PruebaTModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Controllers\PruebaTecnica\PruebaTController.php(15): App\Models\PruebaTModel->get_usuarios()
+#7 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->get_usuarios()
+#8 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+#9 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\PruebaTecnica-Camaguey\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-05-19 19:06:21 --> Error connecting to the database: CodeIgniter\Database\Exceptions\DatabaseException: ERROR:  valor no válido para el parámetro «client_encoding»: «utf8mb4» in C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php:98
+Stack trace:
+#0 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(421): CodeIgniter\Database\Postgre\Connection->connect(false)
+#1 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(620): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseBuilder.php(1649): CodeIgniter\Database\BaseConnection->query('SELECT "c".*\nFR...', Array, false)
+#3 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Models\PruebaTModel.php(33): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Controllers\PruebaTecnica\PruebaTController.php(15): App\Models\PruebaTModel->get_usuarios()
+#5 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->get_usuarios()
+#6 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+#7 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\PruebaTecnica-Camaguey\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+ERROR - 2025-05-19 23:17:53 --> ErrorException: pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (2, Lider, null, null, null, null, uploads/usuarios/foto_682bbc21bb67f.jpg, 2020-09-15, null, Jorge, DE AVILA, De Avila). in C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Controllers\PruebaTecnica\PruebaTController.php(63): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+#10 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+#11 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\PruebaTecnica-Camaguey\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-19 23:17:53 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (2, Lider, null, null, null, null, uploads/usuarios/foto_682bbc21bb67f.jpg, 2020-09-15, null, Jorge, DE AVILA, De Avila).
+[Method: POST, Route: PruebaTecnica/guardar_usuario]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :fecha_nacimiento:, :img_usuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-19 23:17:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (2, Lider, null, null, null, null, uploads/usuarios/foto_682bbc21bb67f.jpg, 2020-09-15, null, Jorge, DE AVILA, De Avila).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-15\', \'uploads/usuarios/foto_682bbc21bb67f.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-15\', \'uploads/usuarios/foto_682bbc21bb67f.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :fecha_nacimiento:, :img_usuario:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-19 23:17:53 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (2, Lider, null, null, null, null, uploads/usuarios/foto_682bbc21bb67f.jpg, 2020-09-15, null, Jorge, DE AVILA, De Avila).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (2, Lider, null, null, null, null, uploads/usuarios/foto_682bbc21bb67f.jpg, 2020-09-15, null, Jorge, DE AVILA, De Avila).', 'C:\\xampp\\htdocs\\PruebaTecnica-Camaguey\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-15\', \'uploads/usuarios/foto_682bbc21bb67f.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-15\', \'uploads/usuarios/foto_682bbc21bb67f.jpg\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-15\', \'uploads/usuarios/foto_682bbc21bb67f.jpg\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :fecha_nacimiento:, :img_usuario:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(63): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-19 23:23:28 --> ErrorException: pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (3, Lider, null, null, null, null, uploads/usuarios/foto_682bbd700c91b.jpg, 2020-09-14, null, Jorge, DE AVILA, De Avila). in C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Controllers\PruebaTecnica\PruebaTController.php(63): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+#10 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+#11 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\PruebaTecnica-Camaguey\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-19 23:23:28 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (3, Lider, null, null, null, null, uploads/usuarios/foto_682bbd700c91b.jpg, 2020-09-14, null, Jorge, DE AVILA, De Avila).
+[Method: POST, Route: PruebaTecnica/guardar_usuario]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :fecha_nacimiento:, :img_usuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(63): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-19 23:23:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (3, Lider, null, null, null, null, uploads/usuarios/foto_682bbd700c91b.jpg, 2020-09-14, null, Jorge, DE AVILA, De Avila).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-14\', \'uploads/usuarios/foto_682bbd700c91b.jpg\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-14\', \'uploads/usuarios/foto_682bbd700c91b.jpg\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :fecha_nacimiento:, :img_usuario:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(63): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-19 23:23:28 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (3, Lider, null, null, null, null, uploads/usuarios/foto_682bbd700c91b.jpg, 2020-09-14, null, Jorge, DE AVILA, De Avila).
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  el valor null para la columna «correo_usuario» viola la restricción not null
+DETAIL:  La fila que falla contiene (3, Lider, null, null, null, null, uploads/usuarios/foto_682bbd700c91b.jpg, 2020-09-14, null, Jorge, DE AVILA, De Avila).', 'C:\\xampp\\htdocs\\PruebaTecnica-Camaguey\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-14\', \'uploads/usuarios/foto_682bbd700c91b.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-14\', \'uploads/usuarios/foto_682bbd700c91b.jpg\')')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (\'Lider\', \'Jorge\', \'DE AVILA\', \'De Avila\', \'2020-09-14\', \'uploads/usuarios/foto_682bbd700c91b.jpg\')')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "fecha_nacimiento", "img_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :fecha_nacimiento:, :img_usuario:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(63): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

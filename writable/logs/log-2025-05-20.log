@@ -1,0 +1,148 @@
+ERROR - 2025-05-20 01:58:41 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...', 'Gomez', 'De Avila', '', '(TI)', '1043469854', 'NaN', '20...
+                                                             ^ in C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Controllers\PruebaTecnica\PruebaTController.php(64): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+#10 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+#11 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\PruebaTecnica-Camaguey\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-20 01:58:41 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...', 'Gomez', 'De Avila', '', '(TI)', '1043469854', 'NaN', '20...
+                                                             ^
+[Method: POST, Route: PruebaTecnica/guardar_usuario]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :correo_usuario:, :tipo_doc:, :numero_doc:, :telefono_usuario:, :fecha_nacimiento:, :estado_usuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(64): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 01:58:41 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...', 'Gomez', 'De Avila', '', '(TI)', '1043469854', 'NaN', '20...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :correo_usuario:, :tipo_doc:, :numero_doc:, :telefono_usuario:, :fecha_nacimiento:, :estado_usuario:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(64): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 01:58:41 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...', 'Gomez', 'De Avila', '', '(TI)', '1043469854', 'NaN', '20...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'20...
+                                                             ^', 'C:\\xampp\\htdocs\\PruebaTecnica-Camaguey\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :correo_usuario:, :tipo_doc:, :numero_doc:, :telefono_usuario:, :fecha_nacimiento:, :estado_usuario:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(64): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ERROR - 2025-05-20 01:58:58 --> ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...', 'Gomez', 'De Avila', '', '(TI)', '1043469854', 'NaN', '20...
+                                                             ^ in C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php:206
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Que...', 'C:\\xampp\\htdocs...', 206)
+#1 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "pr...')
+#2 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "pr...')
+#3 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "pr...')
+#4 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "pr...', Array, false)
+#5 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#6 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\BaseModel.php(843): CodeIgniter\Model->doInsert(Array)
+#7 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Model.php(800): CodeIgniter\BaseModel->insert(Array, true)
+#8 C:\xampp\htdocs\PruebaTecnica-Camaguey\app\Controllers\PruebaTecnica\PruebaTController.php(64): CodeIgniter\Model->insert(Array)
+#9 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+#10 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+#11 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(334): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\PruebaTecnica-Camaguey\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#14 C:\xampp\htdocs\PruebaTecnica-Camaguey\public\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#15 {main}
+CRITICAL - 2025-05-20 01:58:58 --> CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...', 'Gomez', 'De Avila', '', '(TI)', '1043469854', 'NaN', '20...
+                                                             ^
+[Method: POST, Route: PruebaTecnica/guardar_usuario]
+in SYSTEMPATH\Database\BaseConnection.php on line 692.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :correo_usuario:, :tipo_doc:, :numero_doc:, :telefono_usuario:, :fecha_nacimiento:, :estado_usuario:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(64): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 01:58:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...', 'Gomez', 'De Avila', '', '(TI)', '1043469854', 'NaN', '20...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 211.
+ 1 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 2 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :correo_usuario:, :tipo_doc:, :numero_doc:, :telefono_usuario:, :fecha_nacimiento:, :estado_usuario:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(64): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-05-20 01:58:58 --> [Caused by] ErrorException: pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...', 'Gomez', 'De Avila', '', '(TI)', '1043469854', 'NaN', '20...
+                                                             ^
+in SYSTEMPATH\Database\Postgre\Connection.php on line 206.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'pg_query(): Query failed: ERROR:  la sintaxis de entrada no es válida para tipo bigint: «NaN»
+LINE 1: ...\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'20...
+                                                             ^', 'C:\\xampp\\htdocs\\PruebaTecnica-Camaguey\\system\\Database\\Postgre\\Connection.php', 206)
+ 2 SYSTEMPATH\Database\Postgre\Connection.php(206): pg_query(Object(PgSql\Connection), 'INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 3 SYSTEMPATH\Database\BaseConnection.php(738): CodeIgniter\Database\Postgre\Connection->execute('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 4 SYSTEMPATH\Database\BaseConnection.php(652): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (\'Camilo\', \'Andres\', \'Gomez\', \'De Avila\', \'\', \'(TI)\', \'1043469854\', \'NaN\', \'2020-09-04\', 1)')
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO "prueba_camaguey"."usuarios_camaguey" ("primer_nombre", "segundo_nombre", "primer_apellido", "segundo_apellido", "correo_usuario", "tipo_doc", "numero_doc", "telefono_usuario", "fecha_nacimiento", "estado_usuario") VALUES (:primer_nombre:, :segundo_nombre:, :primer_apellido:, :segundo_apellido:, :correo_usuario:, :tipo_doc:, :numero_doc:, :telefono_usuario:, :fecha_nacimiento:, :estado_usuario:)', [...], false)
+ 6 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 7 SYSTEMPATH\BaseModel.php(843): CodeIgniter\Model->doInsert([...])
+ 8 SYSTEMPATH\Model.php(800): CodeIgniter\BaseModel->insert([...], true)
+ 9 APPPATH\Controllers\PruebaTecnica\PruebaTController.php(64): CodeIgniter\Model->insert([...])
+10 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PruebaTecnica\PruebaTController->guardar_usuario()
+11 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PruebaTecnica\PruebaTController))
+12 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 SYSTEMPATH\Boot.php(334): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+15 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))

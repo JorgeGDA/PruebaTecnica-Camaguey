@@ -1,0 +1,29 @@
+body::-webkit-scrollbar-thumb {
+  background: #cd1616;
+  border-radius: 80px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: #cd1616;
+  border-radius: 80px;
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d75151;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d75151;
+}
+
+table.dataTable thead tr th {
+  background-color: #d75151;
+  color: #fff;
+}
